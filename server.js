@@ -55,4 +55,7 @@ app.get("/posts", async (req, res) => {});
 
 app.get("/post/:slug/:id", async (req, res) => {});
 
-app.listen(3000);
+const port = process.env.port || 9000
+app.listen(port, () => {
+  console.log("connect success")
+});
